@@ -1,0 +1,33 @@
+{
+    "cases": [
+        [
+            37,
+            29,
+            34,
+            12,
+            9,
+            9
+        ],
+        [
+            29,
+            23,
+            41,
+            39,
+            11,
+            6
+        ]
+    ],
+    "casecategories": [
+        "maleh2h",
+        "femaleh2h"
+    ],
+    "ageinterval": [
+        0,
+        5,
+        10,
+        20,
+        30,
+        40
+    ],
+    "graphlabel": "Observed cases (confirmed)"
+}

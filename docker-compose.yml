@@ -1,0 +1,16 @@
+version: "3"
+services:
+  lab:
+    image: jupyter_clade1mpox:v02 
+    container_name: clade1mpox_container 
+    build:
+        context: .
+        dockerfile: ./.devcontainer/Dockerfile
+
+    ports:
+      - "8800:8888" # http://localhost:8800/lab to launch Jupyter Lab
+
+    volumes:
+      - .:/home/jovyan/work
+
+    command: start.sh jupyter lab

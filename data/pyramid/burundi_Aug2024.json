@@ -1,0 +1,42 @@
+{
+    "cases": [
+        [
+            29,
+            25,
+            7,
+            13,
+            29,
+            20,
+            7,
+            0,
+            6
+        ],
+        [
+            33,
+            17,
+            11,
+            13,
+            24,
+            11,
+            0,
+            1,
+            4
+        ]
+    ],
+    "casecategories": [
+        "male",
+        "female"
+    ],
+    "ageinterval": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        30,
+        40,
+        50,
+        60
+    ],
+    "graphlabel": "observed cases (confirmed)"
+}

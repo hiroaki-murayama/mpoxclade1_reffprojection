@@ -1,0 +1,33 @@
+{
+    "cases": [
+        [
+            22,
+            25,
+            66,
+            23,
+            20,
+            20
+        ],
+        [
+            16,
+            31,
+            41,
+            27,
+            9,
+            8
+        ]
+    ],
+    "casecategories": [
+        "malezoonotic",
+        "femalehzoonotic"
+    ],
+    "ageinterval": [
+        0,
+        5,
+        10,
+        20,
+        30,
+        40
+    ],
+    "graphlabel": "Observed cases (confirmed)"
+}
