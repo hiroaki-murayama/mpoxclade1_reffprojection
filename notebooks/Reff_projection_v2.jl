@@ -15,7 +15,7 @@
 # ---
 
 using Pkg
-Pkg.activate("../")
+#Pkg.activate("../")
 
 # ### Preparation
 
@@ -287,11 +287,12 @@ println("Rₑ (Taiwan): ", dominant_eigvals_taiwan)
 
 # +
 default_color = palette(:auto)[1]
-colours = [:royalblue, :firebrick, :forestgreen]
-#[:royalblue, 1, 2, :firebrick, RGBA(red(default_color) * 0.8, green(default_color) * 0.8, blue(default_color) * 0.8, 1.0), RGBA(65/255 * 0.8, 105/255 * 0.8, 225/255 * 0.8, 1.0)]  
-bottom_margin = 10 * Plots.PlotMeasures.mm
+colours = [:royalblue, 1, 2, :firebrick, RGBA(red(default_color) * 0.8, green(default_color) * 0.8, blue(default_color) * 0.8, 1.0), RGBA(65/255 * 0.8, 105/255 * 0.8, 225/255 * 0.8, 1.0)]  
 
-plot([2015, 2015], [0.79, 0.85], color=:black, xlabel="year", ylabel="reproduction number", label="", ylim=(0,1.3), title="", size=(600,300), bottom_margin=bottom_margin)
+bottom_margin = 10 * Plots.PlotMeasures.mm
+xticks = [2010, 2020, 2025, 2030, 2040, 2050, 2060]
+
+plot([2015, 2015], [0.79, 0.85], color=:black, xlabel="year", ylabel="reproduction number", label="", ylim=(0,1.3), title="", size=(600,300), bottom_margin=bottom_margin, xticks=xticks)
 scatter!([2015], [0.82], color=:black, marker=:black, markersize=4, markerstrokewidth=0, label=nothing)
 plot!([2013, 2017], [0.82, 0.82], color=:black, label=nothing)
 annotate!(2015, 0.7, text("Tshuapa", "Helvetica", :black, 7))
@@ -299,5 +300,5 @@ annotate!(2015, 0.7, text("Tshuapa", "Helvetica", :black, 7))
 plot!(years, dominant_eigvals_drc, color=colours[1], label="DRC", linewidth=2)
 plot!(years, dominant_eigvals_uk, color=colours[2], label="UK", linewidth=1.2)
 plot!(years, dominant_eigvals_taiwan, color=colours[3], label="Taiwan", linewidth=1.2)
-
+vline!([2025], color=RGBA(0.7, 0.7, 0.7, 0.5), linestyle=:dot, label="")
 hline!([1], color=RGBA(0.5, 0.5, 0.5, 0.5), linestyle=:dash, label="")
